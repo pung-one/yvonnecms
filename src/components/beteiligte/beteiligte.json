@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_beteiligte_beteiligtes",
+  "info": {
+    "displayName": "Beteiligte",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Rolle": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string"
+    }
+  }
+}
