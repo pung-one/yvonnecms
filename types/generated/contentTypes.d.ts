@@ -468,7 +468,7 @@ export interface ApiProjektProjekt extends Struct.CollectionTypeSchema {
     positionOnCategoryPage: Schema.Attribute.Integer &
       Schema.Attribute.SetMinMax<
         {
-          max: 36;
+          max: 46;
           min: 0;
         },
         number

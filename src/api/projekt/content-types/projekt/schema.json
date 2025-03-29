@@ -57,7 +57,7 @@
       "min": 0,
       "required": false,
       "default": 0,
-      "max": 36
+      "max": 46
     },
     "fullscreen": {
       "type": "boolean",
