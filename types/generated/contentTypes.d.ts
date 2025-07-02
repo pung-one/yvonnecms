@@ -433,6 +433,33 @@ export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPdfPdf extends Struct.CollectionTypeSchema {
+  collectionName: 'pdfs';
+  info: {
+    description: '';
+    displayName: 'PDFs';
+    pluralName: 'pdfs';
+    singularName: 'pdf';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::pdf.pdf'> &
+      Schema.Attribute.Private;
+    pdf: Schema.Attribute.Media<'files'> & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    Title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiProjektProjekt extends Struct.CollectionTypeSchema {
   collectionName: 'projekts';
   info: {
@@ -1002,6 +1029,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
+      'api::pdf.pdf': ApiPdfPdf;
       'api::projekt.projekt': ApiProjektProjekt;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
