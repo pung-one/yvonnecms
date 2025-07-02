@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pdfs",
+  "info": {
+    "singularName": "pdf",
+    "pluralName": "pdfs",
+    "displayName": "PDFs",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "pdf": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "Title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
