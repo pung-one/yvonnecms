@@ -553,6 +553,7 @@ export interface ApiProjektProjekt extends Struct.CollectionTypeSchema {
       ['portrait', 'corporate', 'interior', 'jewellery']
     > &
       Schema.Attribute.Required;
+    categoryReplacementSubtitle: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

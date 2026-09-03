@@ -30,8 +30,8 @@
     },
     "positionOnLandingPage": {
       "type": "integer",
-      "min": 0,
       "unique": true,
+      "min": 0,
       "max": 18
     },
     "landingPageImage": {
@@ -44,19 +44,22 @@
     },
     "category": {
       "type": "enumeration",
+      "required": true,
       "enum": [
         "portrait",
         "corporate",
         "interior",
         "jewellery"
-      ],
-      "required": true
+      ]
+    },
+    "categoryReplacementSubtitle": {
+      "type": "string"
     },
     "positionOnCategoryPage": {
       "type": "integer",
-      "min": 0,
       "required": false,
       "default": 0,
+      "min": 0,
       "max": 46
     },
     "fullscreen": {
@@ -64,10 +67,9 @@
       "default": false
     },
     "involved": {
-      "displayName": "Beteiligte",
       "type": "component",
-      "repeatable": true,
-      "component": "beteiligte.beteiligte"
+      "component": "beteiligte.beteiligte",
+      "repeatable": true
     },
     "allPageImage": {
       "type": "media",
